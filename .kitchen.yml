@@ -13,7 +13,8 @@ platforms:
     driver:
       box: ub-14.04-i386
       box_url: https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-i386-vagrant-disk1.box
-
+    run_list:
+      - "recipe[apt::default]"
 #  - name: windows-2012r2
 #    transport:
 #      name: winrm
@@ -23,9 +24,16 @@ platforms:
 #    driver_config:
 #      box: windows2012r2
 #      box_url: http://localhost/windows2012r2.box
+platforms:
+  - name: ubuntu-14.04
+
 
 suites:
-  - name: default
+  - name: server
+    data_bags_path: "test/integration/server/data_bags"
+    encrypted_data_bag_secret_key_path: "test/integration/server/encrypted_data_bag_secret"
     run_list:
       - recipe[sdinc-rundeck::default]
     attributes:
+      rundeck:
+        hostname: 'localhost:8080'

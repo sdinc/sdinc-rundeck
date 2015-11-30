@@ -49,12 +49,12 @@ a.out
 ###########
 .watchr
 .rspec
+.kitchen/*
 
 # Berkshelf #
 #############
 Berksfile.lock
-cookbooks/*
-vendor/*
+berks-cookbooks/*
 tmp
 
 # Strainer #
@@ -79,8 +79,15 @@ bin/*
 .kitchen/
 .kitchen.local.yml
 
-
 # editors #
 ###########
 .idea
+
+
+# keys #
+########
+test/integration/server/encrypted_data_bag_secret
+test/integration/server/rundeck_rsa
+test/integration/server/rundeck_rsa.pub
+
 
