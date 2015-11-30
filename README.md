@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sdinc/sdinc-rundeck.svg?branch=master)](https://travis-ci.org/sdinc/sdinc-rundeck)
+
 # sdinc-rundeck
 
 Wrapper around the community rundeck cookbook
