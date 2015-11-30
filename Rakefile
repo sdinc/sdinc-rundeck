@@ -9,12 +9,12 @@ def run_command(command)
 end
 
 desc 'kitchen converge'
-task :run do 
+task :run do
   run_command('kitchen converge')
 end
 
 desc 'kitchen destroy'
-task :stop do 
+task :stop do
   run_command('kitchen destroy')
 end
 
