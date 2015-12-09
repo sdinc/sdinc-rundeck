@@ -1,0 +1,26 @@
+{
+  "chef_type": "data_bag_item",
+  "data_bag": "rundeck",
+  "id": "users",
+  "description": "Local rundeck users",
+  "users": {
+    "admin": {
+      "groups": [
+        "user",
+        "admin",
+        "architect",
+        "deploy",
+        "build"
+      ],
+      "password": "secrete"
+    },
+    "apiuser": {
+      "groups": [
+        "user",
+        "admin",
+        "deploy"
+      ],
+      "password": "secrete"
+    }
+  }
+}

@@ -1,32 +1,18 @@
 ---
 driver:
-  name: vagrant
+  name: docker
+  binary: docker.io
+  use_sudo: false
 
 provisioner:
   name: chef_zero
+  require_chef_omnibus: 12.5.1
+  #require_chef_omnibus: true
 
-# platforms:
-#  - name: ubuntu-14.04
-# specific to run on asus labby
 platforms:
-  - name: ub-14.04-i386
-    driver:
-      box: ub-14.04-i386
-      box_url: https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-i386-vagrant-disk1.box
+  - name: ubuntu
     run_list:
-      - "recipe[apt::default]"
-#  - name: windows-2012r2
-#    transport:
-#      name: winrm
-#      port: 5985
-#      username: vagrant
-#      password: vagrant
-#    driver_config:
-#      box: windows2012r2
-#      box_url: http://localhost/windows2012r2.box
-platforms:
-  - name: ubuntu-14.04
-
+      - "recipe[apt]"
 
 suites:
   - name: server
@@ -35,5 +21,9 @@ suites:
     run_list:
       - recipe[sdinc-rundeck::default]
     attributes:
+      java: 
+        jdk_version: '8'
+        oracle:
+          accept_oracle_download_terms: true
       rundeck:
         hostname: 'localhost:8080'

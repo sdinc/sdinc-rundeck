@@ -5,10 +5,11 @@ source 'https://rubygems.org'
 
 # cloud providers
 gem 'chef'
-gem 'kitchen-ec2'
+gem 'kitchen-docker'
+# gem 'kitchen-ec2'
 # gem 'kitchen-google'
 # gem 'kitchen-rackspace'
-gem 'knife-ec2'
+# gem 'knife-ec2'
 # gem 'knife-google'
 # gem 'knife-rackspace'
 

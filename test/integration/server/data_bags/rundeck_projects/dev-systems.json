@@ -1,0 +1,9 @@
+{
+  "id": "dev-systems",
+  "hostname": "ipaddress",
+  "username": "rundeck",
+  "pattern": "chef_environment:dev1 OR chef_environment:dev2",
+  "description": "These instances are tied to the dev-systems project in Rundeck.",
+  "chef_rundeck_url" : "Optional: URL for the chef-rundeck integration endpoint"
+}
+
