@@ -8,5 +8,6 @@
 package 'aptitude'
 
 include_recipe 'rundeck::server'
-include_recipe 'create_chef_dir'
+# TODO: need to figure where create_chef_dir comes from
+# include_recipe 'create_chef_dir'
 include_recipe 'rundeck::chef-rundeck'
